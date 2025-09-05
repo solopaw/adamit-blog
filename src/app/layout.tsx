@@ -1,16 +1,26 @@
-import '@/styles/globals.css'
-export default function DashboardLayout({
-  children,
-}: {
+import "@/styles/globals.css"
+import Navbar from "@/components/navbar"
+import { ThemeProvider } from "@/components/theme-provider"
+interface RootLayoutProps {
   children: React.ReactNode
-}) {
+}
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body>
-        {/* Layout UI */}
-        {/* Place children where you want to render a page or nested layout */}
-        <main>{children}</main>
-      </body>
-    </html>
+    
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar></Navbar>
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    
   )
 }
