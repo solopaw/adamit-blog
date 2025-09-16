@@ -1,11 +1,10 @@
 // @ts-check
 import { clientEnv, clientSchema } from "./schema.mjs";
-
+import {ZodFormattedError} from 'zod'
 const _clientEnv = clientSchema.safeParse(clientEnv);
 
 export const formatErrors = (
-  /** @type {import('zod').ZodFormattedError<Map<string,string>,string>} */
-  errors,
+  errors: ZodFormattedError<Map<string, string>, string>,
 ) =>
   Object.entries(errors)
     .map(([name, value]) => {

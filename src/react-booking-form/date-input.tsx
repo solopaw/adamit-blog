@@ -1,6 +1,6 @@
 import React, { useMemo } from "react"
 import Flatpickr from "react-flatpickr"
-import { BookingForm } from "lib"
+import { BookingForm } from "."
 
 type DateInputType = {
   placeholder?: string
