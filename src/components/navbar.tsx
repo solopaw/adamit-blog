@@ -8,8 +8,11 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                   <Link href="/"><HomeIcon /></Link>
-                    <Link href="/booking">Booking</Link>
+                    
                 </NavigationMenuLink>
+                  <NavigationMenuLink>
+                  <Link href="/booking">Booking</Link>
+                  </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
