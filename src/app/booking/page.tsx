@@ -4,21 +4,15 @@ import { type NextPage } from 'next'
 import { prisma } from '@/server/db/client'
 import { Day } from '@prisma/client'
 
-interface HomeProps {
-  days: Day[]
-  closedDays: string[] // as ISO string
-}
+
 export const metadata = {
   title: 'Booking Software',
   description: 'by josh',
 }
-async function Home(props: HomeProps = {
-  days: [],
-  closedDays: []
-}) {
+async function Home() {
 
-  const days: Day[] = (await prisma.day.findMany()) || props.days
-  const closedDays = (await prisma.closedDay.findMany()).map((d) => formatISO(d.date)) || props.closedDays
+  const days: Day[] = (await prisma.day.findMany()) 
+  const closedDays = (await prisma.closedDay.findMany()).map((d) => formatISO(d.date))
 
   return (
     
