@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "next:build": "next build",
     "start": "next start",
     "prod": "vercel --prod",
     "prisma:generate": "prisma generate && drizzle-kit generate --schema ./drizzle/schema.ts",
-    "prisma:push": "prisma db push"
+    "prisma:push": "prisma db push",
+    "build": "npm run prisma:generate && npm run next:build"
   },
   "keywords": [],
   "author": "",
