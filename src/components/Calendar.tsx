@@ -1,6 +1,7 @@
+'use client';
 import { format, formatISO, isBefore, parse } from 'date-fns'
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { type FC, useEffect, useState } from 'react'
 import { now, OPENING_HOURS_INTERVAL } from '@/constants/config'
 import { getOpeningTimes, roundToNearestMinutes } from '@/utils/helper'
