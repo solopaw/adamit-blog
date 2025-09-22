@@ -8,7 +8,7 @@
     "next:build": "next build",
     "start": "next start",
     "prod": "vercel --prod",
-    "prisma:generate": "prisma generate && drizzle-kit generate --schema ./drizzle/schema.ts",
+    "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push",
     "build": "npm run prisma:generate && npm run next:build"
   },
