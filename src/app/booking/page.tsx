@@ -12,19 +12,22 @@ export const metadata = {
   title: 'Booking Software',
   description: 'by josh',
 }
-const Home: NextPage<HomeProps> = async () => {  
-  const days:Day[] = (await prisma.day.findMany())
-  const closedDays = (await prisma.closedDay.findMany()).map((d) => formatISO(d.date))
+async function Home(props: HomeProps = {
+  days: [],
+  closedDays: []
+}) {
+
+  const days: Day[] = (await prisma.day.findMany()) || props.days
+  const closedDays = (await prisma.closedDay.findMany()).map((d) => formatISO(d.date)) || props.closedDays
 
   return (
-    <>
+    
       
 
       <main>
         <CalendarComponent days={days} closedDays={closedDays} />
       </main>
-    </>
-  )
+      )
 }
 
 
