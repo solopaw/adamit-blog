@@ -41,16 +41,16 @@ export default function ContactClient() {
       </Button>
       
       <Link href="https://www.snapchat.com/@adamjoelfraser">
-        <SnapchatIcon size="100px" color={color}/>
+        <SnapchatIcon size="50px" color={color}/>
       </Link>
       <Link href="https://www.instagram.com/adamjoelfraser">
-        <InstagramIcon color={color} size="100px"/>
+        <InstagramIcon color={color} size="50px"/>
       </Link>
       <Link href="https://www.tiktok.com/@adamjoelfraser">
-        <TiktokIcon size="100px" color={color}/>
+        <TiktokIcon size="50px" color={color}/>
       </Link>
       <Link href="https://www.youtube.com/@adamjoelfraser">
-        <YoutubeIcon size="100px" color={color} />
+        <YoutubeIcon size="50px" color={color} />
       </Link>
     </div>
   );
