@@ -1,4 +1,5 @@
-import "@/styles/globals.css"
+// import "@/styles/globals.css"
+import "@/styles/tailwindcss.css"
 import Navbar from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Metadata } from "next"
@@ -16,15 +17,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <head />
         
-        <body className="m-3">
+        <body className="m-5">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar></Navbar>
-            {children}
+            <Navbar />
+              {children}
           </ThemeProvider>
         </body>
       </html>
