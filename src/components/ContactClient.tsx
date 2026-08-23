@@ -52,6 +52,9 @@ export default function ContactClient() {
       <Link href="https://www.youtube.com/@adamjoelfraser">
         <YoutubeIcon size="50px" color={color} />
       </Link>
+      <Link href="https://discord.gg/XC8kTt8mfZ">
+       Discord
+      </Link>
     </div>
   );
 }
